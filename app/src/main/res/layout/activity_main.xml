@@ -9,36 +9,51 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="66dp"
-        android:layout_height="35dp"
-        android:text="Login"
+        android:layout_height="0dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginBottom="59dp"
+        android:text="@string/login"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="164dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="63dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/e_mail"
         android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:autofillHints="" tools:targetApi="o"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please insert your KEA email address"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="258dp" />
+        android:layout_marginEnd="78dp"
+        android:layout_marginRight="78dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/please_insert_your_kea_email_address"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="393dp" />
+        android:layout_marginBottom="290dp"
+        android:onClick="checkLogin"
+        android:text="@string/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 </android.support.constraint.ConstraintLayout>
