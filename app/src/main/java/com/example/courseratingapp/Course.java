@@ -7,7 +7,10 @@ public class Course {
     private String subject;
     private ArrayList<Rating> ratings = new ArrayList<>();
 
-    public Course() {
+    public Course(String teachername, String subject, ArrayList<Rating> ratings) {
+        this.teachername = teachername;
+        this.subject = subject;
+        this.ratings = ratings;
     }
 
     public String getTeachername() {

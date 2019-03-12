@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ShowCourseActivity">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/how_relevant_is_the_course"
+                tools:layout_editor_absoluteX="134dp"
+                tools:layout_editor_absoluteY="233dp" />
+
+            <SeekBar
+                android:id="@+id/subjectRelevans"
+                style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:layout_editor_absoluteX="104dp"
+                tools:layout_editor_absoluteY="96dp" />
+
+            <TextView
+                android:id="@+id/teacherPerformanceView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/what_would_you_rate_your_teachers_performance"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="106dp" />
+
+            <SeekBar
+                android:id="@+id/teacherPerformance"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="107dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/how_well_does_the_teacher_prepare_for_the_classes"
+                tools:layout_editor_absoluteX="66dp"
+                tools:layout_editor_absoluteY="139dp" />
+
+            <SeekBar
+                android:id="@+id/teacherPreparation"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="153dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/how_well_does_the_teacher_give_you_feedback"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="182dp" />
+
+            <SeekBar
+                android:id="@+id/amountOfFeedback"
+                android:layout_width="332dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="172dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/how_good_is_the_examples_the_teachers_use"
+                tools:layout_editor_absoluteX="72dp"
+                tools:layout_editor_absoluteY="211dp" />
+
+            <SeekBar
+                android:id="@+id/examples"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="227dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/do_you_think_the_course_give_good_job_opportunities"
+                tools:layout_editor_absoluteX="31dp"
+                tools:layout_editor_absoluteY="220dp" />
+
+            <SeekBar
+                android:id="@+id/jobOpportunities"
+                style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                android:layout_width="329dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="241dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/courseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="177dp"
+            android:layout_marginLeft="177dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginRight="176dp"
+            android:layout_marginBottom="45dp"
+            android:text="@string/textview"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

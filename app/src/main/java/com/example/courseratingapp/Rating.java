@@ -3,8 +3,8 @@ package com.example.courseratingapp;
 public class Rating {
     private int subjectRelevans = 1;
     private int teacherPerformance = 1;
-    private int amountOfFeedback = 1;
     private int teacherPreparation = 1;
+    private int amountOfFeedback = 1;
     private int examples = 1;
     private int jobOpportunities = 1;
 
