@@ -25,4 +25,5 @@
     <string name="how_relevant_is_the_course">How relevant is the course?</string>
     <string name="rate">Rate</string>
     <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
 </resources>
