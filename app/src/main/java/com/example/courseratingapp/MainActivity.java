@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         init();
         loadStudents();
 
+        if (savedInstanceState != null) {
+            email.setText(savedInstanceState.getString("email"));
+        }
+
     }
 
     public void loadStudents(){
@@ -47,5 +51,10 @@ public class MainActivity extends AppCompatActivity {
         this.email = findViewById(R.id.email);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
+        outState.putString("email", email.getText().toString());
+    }
 }

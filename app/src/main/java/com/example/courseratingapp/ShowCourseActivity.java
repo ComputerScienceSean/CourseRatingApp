@@ -1,7 +1,9 @@
 package com.example.courseratingapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -25,6 +27,12 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
             examplesVal.setText(savedInstanceState.getString("examples"));
             jobOpportunitiesVal.setText(savedInstanceState.getString("jobOpportunities"));
         }
+    }
+
+    public void onRateClick(View view){
+        Intent rate = new Intent(this, ChooseCourseActivity.class);
+        startActivity(rate);
+
     }
 
 

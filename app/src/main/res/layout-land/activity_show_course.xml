@@ -37,7 +37,7 @@
             <SeekBar
                 android:id="@+id/subjectRelevans"
                 style="@android:style/Widget.DeviceDefault.Light.SeekBar"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="104dp"
@@ -64,7 +64,7 @@
 
             <SeekBar
                 android:id="@+id/teacherPerformance"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="46dp"
@@ -91,7 +91,7 @@
 
             <SeekBar
                 android:id="@+id/teacherPreparation"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="16dp"
@@ -118,7 +118,7 @@
 
             <SeekBar
                 android:id="@+id/amountOfFeedback"
-                android:layout_width="332dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="40dp"
@@ -145,7 +145,7 @@
 
             <SeekBar
                 android:id="@+id/examples"
-                android:layout_width="330dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="80dp"
@@ -173,7 +173,7 @@
             <SeekBar
                 android:id="@+id/jobOpportunities"
                 style="@android:style/Widget.DeviceDefault.Light.SeekBar"
-                android:layout_width="329dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 tools:layout_editor_absoluteX="25dp"
