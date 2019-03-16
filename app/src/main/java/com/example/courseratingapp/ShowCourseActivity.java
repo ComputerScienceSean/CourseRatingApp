@@ -20,6 +20,13 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
         setContentView(R.layout.activity_show_course);
         init();
 
+        //get intent
+
+        Intent intent = getIntent();
+        Course course = intent.getParcelableExtra("Course");
+        this.courseTitle.setText(course.getSubject());
+
+
         if (savedInstanceState != null){
             subRelVal.setText(savedInstanceState.getString("subjectRelevans"));
             teacherPerformanceVal.setText(savedInstanceState.getString("teacherPerformance"));

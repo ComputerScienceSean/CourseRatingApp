@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkLogin(View view) {
 
-        Intent login = new Intent(this, ShowCourseActivity.class);
+       /* Intent login = new Intent(this, ShowCourseActivity.class);
         login.putExtra("email", this.email.getText().toString());
-        startActivity(login);
+        startActivity(login);*/
 
-        /*if (isEmailValid(this.email.getText().toString())) {
+        if (isEmailValid(this.email.getText().toString())) {
 
 
             if (this.email.getText().toString().contains("@stud.kea.dk") && email.getText().toString().length() > 0) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast failedLogin = Toast.makeText(getApplicationContext(), "Invalid email, try again", Toast.LENGTH_LONG);
             failedLogin.show();
-        }*/
+        }
     }
 
     public boolean isEmailValid(String email) {
