@@ -56,10 +56,20 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");
 
+        int totalScore = subjectRelevans.getProgress() + teacherPerformance.getProgress() + teacherPreparation.getProgress() +
+                amountOfFeedback.getProgress() + examples.getProgress() + jobOpportunities.getProgress();
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your rating of the " + courseTitle.getText() + " course");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+        emailIntent.putExtra(Intent.EXTRA_TEXT,
+                "Welcome to the recap of the score you've given to the " + courseTitle.getText() + " course\n\n" +
+                "You gave the subject relevans a score of: \n" + subRelVal.getText().toString() + "\n\n" +
+                "You gave the teacher performance a score of: \n" + teacherPerformanceVal.getText().toString() + "\n\n" +
+                "You gave the teacher preparation a score of: \n" + teacherPreparationVal.getText().toString() + "\n\n" +
+                "You gave the amount of feedback a score of: \n" + amountOfFeedbackVal.getText().toString() + "\n\n" +
+                "You gave the examples a score of: \n" + examplesVal.getText().toString() + "\n\n" +
+                "You gave the job opportunities a score of: \n" + jobOpportunitiesVal.getText().toString() + "\n\n" +
+                "You've given your teacher a total score of: \n" + totalScore);
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
