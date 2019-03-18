@@ -31,6 +31,7 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/how_relevant_is_the_course"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="134dp"
                 tools:layout_editor_absoluteY="233dp" />
 
@@ -60,6 +61,7 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/what_would_you_rate_your_teachers_performance"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="69dp"
                 tools:layout_editor_absoluteY="106dp" />
 
@@ -88,6 +90,7 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/how_well_does_the_teacher_prepare_for_the_classes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="66dp"
                 tools:layout_editor_absoluteY="139dp" />
 
@@ -116,6 +119,7 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/how_well_does_the_teacher_give_you_feedback"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="182dp" />
 
@@ -144,6 +148,7 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/how_good_is_the_examples_the_teachers_use"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="72dp"
                 tools:layout_editor_absoluteY="211dp" />
 
@@ -172,6 +177,7 @@
                 android:layout_marginLeft="9dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/do_you_think_the_course_give_good_job_opportunities"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 tools:layout_editor_absoluteX="31dp"
                 tools:layout_editor_absoluteY="220dp" />
 
