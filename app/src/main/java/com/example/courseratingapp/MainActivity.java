@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        loadStudents();
+        Course.loadCourses();
+        //loadStudents();
 
         if (savedInstanceState != null) {
             email.setText(savedInstanceState.getString("email"));

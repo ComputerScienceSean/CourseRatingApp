@@ -8,21 +8,22 @@ import java.util.ArrayList;
 public class Course implements Parcelable {
     private String teachername;
     private String subject;
-    private ArrayList<Rating> ratings = new ArrayList<>();
+    private static ArrayList<Course> courses = new ArrayList<>();
+    private boolean rated;
 
 
 
-    public Course() {
-    }
+
+
 
     public Course(String subject) {
         this.subject = subject;
     }
 
-    public Course(String teachername, String subject, ArrayList<Rating> ratings) {
+    public Course(String teachername, String subject, ArrayList<Course> courses) {
         this.teachername = teachername;
         this.subject = subject;
-        this.ratings = ratings;
+        this.courses = courses;
 
     }
 
@@ -44,6 +45,14 @@ public class Course implements Parcelable {
         }
     };
 
+    public boolean isRated() {
+        return rated;
+    }
+
+    public void setRated(boolean rated) {
+        this.rated = rated;
+    }
+
     public String getTeachername() {
         return teachername;
     }
@@ -60,12 +69,8 @@ public class Course implements Parcelable {
         this.subject = subject;
     }
 
-    public ArrayList<Rating> getRatings() {
-        return ratings;
-    }
-
-    public void setRatings(ArrayList<Rating> ratings) {
-        this.ratings = ratings;
+    public static void setCourses(ArrayList<Course> courses) {
+        Course.courses = courses;
     }
 
     @Override
@@ -78,4 +83,27 @@ public class Course implements Parcelable {
         dest.writeString(teachername);
         dest.writeString(subject);
     }
+
+    public static void loadCourses(){
+        ArrayList<Course> mlist = new ArrayList<>();
+        mlist.add(new Course("Python"));
+        mlist.add(new Course("Android"));
+        mlist.add(new Course("Angular"));
+        mlist.add(new Course("C#"));
+        courses = mlist;
+    }
+
+    public static ArrayList<Course> getCourses(){
+        return courses;
+    }
+
+
+    public static void updateCourse(Course course){
+        for (int i = 0; i < courses.size(); i++) {
+            if(courses.get(i).getSubject().equals(course.getSubject())){
+                courses.set(i, course);
+            }
+        }
+    }
+
 }

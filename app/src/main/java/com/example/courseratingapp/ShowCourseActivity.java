@@ -19,7 +19,7 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
 
     private SeekBar subjectRelevans, teacherPerformance, teacherPreparation, amountOfFeedback, examples, jobOpportunities;
     private TextView subRelVal, teacherPerformanceVal, teacherPreparationVal, amountOfFeedbackVal, examplesVal, jobOpportunitiesVal, courseTitle;
-
+    private Course course;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +29,8 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
         //get intent
 
         Intent intent = getIntent();
-        Course course = intent.getParcelableExtra("Course");
-        this.courseTitle.setText(course.getSubject());
+        this.course = intent.getParcelableExtra("Course");
+        this.courseTitle.setText(this.course.getSubject());
 
 
         if (savedInstanceState != null) {
@@ -48,6 +48,8 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
         answeredRate.show();
         Intent rate = new Intent(this, ChooseCourseActivity.class);
         startActivity(rate);
+        this.course.setRated(true);
+        Course.updateCourse(course);
         sendEmail();
 
     }
@@ -83,7 +85,7 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
                         "You gave the amount of feedback a score of: \n" + amountOfFeedbackVal.getText().toString() + "\n\n" +
                         "You gave the examples a score of: \n" + examplesVal.getText().toString() + "\n\n" +
                         "You gave the job opportunities a score of: \n" + jobOpportunitiesVal.getText().toString() + "\n\n" +
-                        "You've given your teacher a total score of: \n" + totalScore + " " + getGrade());
+                        "You've given your teacher a total score of: \n" + totalScore + " Which has earned you the grade of " + getGrade());
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
@@ -100,13 +102,15 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
                 amountOfFeedback.getProgress() + examples.getProgress() + jobOpportunities.getProgress();
 
         if (totalScore == 600){
-            return "U a god amongst men";
+            return "A+";
+        } else if (totalScore >= 550){
+            return "A";
         } else if (totalScore >= 500){
-            return "Ayyy you doing pretty good my dude. People like you!";
+            return "B";
         } else if (totalScore >= 400){
-            return "You have room for improvement your students do not like you";
+            return "C";
         } else {
-            return "You have failed as a teacher. kys";
+            return "D";
         }
     }
 

@@ -10,7 +10,9 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ChooseCourseActivity extends AppCompatActivity {
 
@@ -25,15 +27,19 @@ public class ChooseCourseActivity extends AppCompatActivity {
     }
 
     public void init(){
-        this.recyclerView = findViewById(R.id.recyclerView_list);
-        List<Course> mlist = new ArrayList<>();
-        mlist.add(new Course("Python"));
-        mlist.add(new Course("Android"));
-        mlist.add(new Course("Angular"));
-        mlist.add(new Course("C#"));
-        Adapter adapter = new Adapter(this, mlist);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            this.recyclerView = findViewById(R.id.recyclerView_list);
+            Set<Course> unAnsweredCourses = new HashSet<>();
+            ArrayList<Course> allCourses = Course.getCourses();
+
+            for (Course course : allCourses) {
+                if (!course.isRated()){
+                    unAnsweredCourses.add(course);
+                }
+            }
+
+            Adapter adapter = new Adapter(this, new ArrayList<>(unAnsweredCourses));
+            recyclerView.setAdapter(adapter);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
 }
