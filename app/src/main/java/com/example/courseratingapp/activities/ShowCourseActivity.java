@@ -1,15 +1,16 @@
-package com.example.courseratingapp;
+package com.example.courseratingapp.activities;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.courseratingapp.entities.Course;
+import com.example.courseratingapp.R;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -55,17 +56,10 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
     }
 
     protected void sendEmail() {
-        String filename = "currentUser";
-        File file = new File(getFilesDir(), filename);
+
         String email = getString(R.string.recipientMail);
 
-        try {
-            Scanner s = new Scanner(file);
-            email = s.nextLine();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
         Log.i("Send email", "");
 
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -76,16 +70,15 @@ public class ShowCourseActivity extends AppCompatActivity implements SeekBar.OnS
 
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your rating of the " + courseTitle.getText() + " course");
-        emailIntent.putExtra(Intent.EXTRA_TEXT,
-                "Welcome to the recap of the score you've given to the " + courseTitle.getText() + " course!\n\n" +
-                        "You gave the subject relevans a score of: \n" + subRelVal.getText().toString() + "\n\n" +
-                        "You gave the teacher performance a score of: \n" + teacherPerformanceVal.getText().toString() + "\n\n" +
-                        "You gave the teacher preparation a score of: \n" + teacherPreparationVal.getText().toString() + "\n\n" +
-                        "You gave the amount of feedback a score of: \n" + amountOfFeedbackVal.getText().toString() + "\n\n" +
-                        "You gave the examples a score of: \n" + examplesVal.getText().toString() + "\n\n" +
-                        "You gave the job opportunities a score of: \n" + jobOpportunitiesVal.getText().toString() + "\n\n" +
-                        "You've given your teacher a total score of: \n" + totalScore + " Which has earned you the grade of " + getGrade());
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mailSubject, courseTitle.getText().toString()));
+        emailIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.mailWelcome, course.getSubject()) + "\n\n" +
+                        getString(R.string.mailLine1, subRelVal.getText().toString()) + "\n\n" +
+                        getString(R.string.mailLine2, teacherPerformanceVal.getText().toString()) + "\n\n" +
+                        getString(R.string.mailLine3, teacherPreparationVal.getText().toString()) + "\n\n" +
+                        getString(R.string.mailLine4, amountOfFeedbackVal.getText().toString()) + "\n\n" +
+                        getString(R.string.mailLine5, examplesVal.getText().toString()) + "\n\n" +
+                        getString(R.string.mailLine6, jobOpportunitiesVal.getText().toString()) + "\n\n" +
+                        getString(R.string.mailGrade, totalScore, getGrade()));
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));

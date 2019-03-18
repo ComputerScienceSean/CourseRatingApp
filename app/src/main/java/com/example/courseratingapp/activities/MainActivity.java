@@ -1,4 +1,4 @@
-package com.example.courseratingapp;
+package com.example.courseratingapp.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.courseratingapp.entities.Course;
+import com.example.courseratingapp.R;
 
 import java.io.FileOutputStream;
 import java.util.regex.Matcher;

@@ -29,4 +29,14 @@
     <string name="_0_100">0 / 100</string>
     <string name="recipientMail">sean@darcy.dk</string>
     <string name="course">Course</string>
+    <string name="mailWelcome">Welcome to the recap of the score you\'ve given to the  %1$s course!</string>
+    <string name="mailLine1">You gave the subject relevans a score of: \n %1$s </string>
+    <string name="mailLine2">You gave the teacher performance a score of: \n %1$s </string>
+    <string name="mailLine3">You gave the teacher preparation a score of: \n %1$s </string>
+    <string name="mailLine4">You gave the amount of feedback a score of: \n %1$s </string>
+    <string name="mailLine5">You gave the examples a score of: \n %1$s </string>
+    <string name="mailLine6">You gave the job opportunities a score of: \n %1$s </string>
+    <string name="mailGrade">You\'ve given your teacher a total score of: \n %1$d, which has earned you the grade %2$s </string>
+    <string name="mailSubject">Your rating of the %1$s course</string>
+
 </resources>

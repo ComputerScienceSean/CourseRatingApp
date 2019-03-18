@@ -1,17 +1,16 @@
-package com.example.courseratingapp;
+package com.example.courseratingapp.activities;
 
-import android.app.assist.AssistStructure;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Window;
-import android.view.WindowManager;
+
+import com.example.courseratingapp.entities.Adapter;
+import com.example.courseratingapp.entities.Course;
+import com.example.courseratingapp.R;
 
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class ChooseCourseActivity extends AppCompatActivity {

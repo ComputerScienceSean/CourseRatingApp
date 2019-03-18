@@ -1,4 +1,4 @@
-package com.example.courseratingapp;
+package com.example.courseratingapp.entities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.example.courseratingapp.R;
+import com.example.courseratingapp.activities.ShowCourseActivity;
 
 import java.util.List;
 

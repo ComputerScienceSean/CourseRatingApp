@@ -1,4 +1,4 @@
-package com.example.courseratingapp;
+package com.example.courseratingapp.entities;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,10 +10,6 @@ public class Course implements Parcelable {
     private String subject;
     private static ArrayList<Course> courses = new ArrayList<>();
     private boolean rated;
-
-
-
-
 
 
     public Course(String subject) {
