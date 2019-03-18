@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.FileOutputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -44,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
             if (this.email.getText().toString().contains("@stud.kea.dk") && email.getText().toString().length() > 0) {
                 Intent login = new Intent(this, ChooseCourseActivity.class);
+                login.putExtra("email", this.email.getText().toString());
+                FileOutputStream outputStream;
+                String filename = "currentUSer";
+                try {
+                    outputStream = openFileOutput(filename, MODE_PRIVATE);
+                    outputStream.write(email.getText().toString().getBytes());
+                    outputStream.close();
+                } catch (Exception e){
+                    e.printStackTrace();
+                }
                 startActivity(login);
                 Toast loginSuccess = Toast.makeText(getApplicationContext(), "Welcome, " + email.getText(), Toast.LENGTH_LONG);
                 loginSuccess.show();
