@@ -29,11 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loadStudents() {
-        for (int i = 1; i < 10; i++) {
-            Student student = new Student("sean" + i, "darcy", "sean0125@stud.kea.dk" + i, "280320202" + i);
-        }
-    }
 
     public void checkLogin(View view) {
 
