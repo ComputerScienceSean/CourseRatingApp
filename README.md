@@ -12,8 +12,8 @@ For this to be applicable you will need to have set up an email client so the pr
 
 1. When you are logging in you will need to use a KEA student email.
 
-i.e. sean0125@stud.kea.dk
+    i.e. sean0125@stud.kea.dk
 
-*You can only answer each course once.*
+    *You can only answer each course once.*
 
 2. You will need to have setup an email client on your device/emulator.
