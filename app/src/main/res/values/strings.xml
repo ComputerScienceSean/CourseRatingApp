@@ -36,7 +36,7 @@
     <string name="mailLine4">You gave the amount of feedback a score of: \n %1$s </string>
     <string name="mailLine5">You gave the examples a score of: \n %1$s </string>
     <string name="mailLine6">You gave the job opportunities a score of: \n %1$s </string>
-    <string name="mailGrade">You\'ve given your teacher a total score of: \n %1$d, which has earned you the grade %2$s </string>
+    <string name="mailGrade">You\'ve given your teacher a total score of: \n %1$d, which has earned the teacher a grade of %2$s </string>
     <string name="mailSubject">Your rating of the %1$s course</string>
 
 </resources>
